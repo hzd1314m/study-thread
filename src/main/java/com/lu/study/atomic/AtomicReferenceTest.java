@@ -29,7 +29,7 @@ public class AtomicReferenceTest {
         }
 
 
-        // 原子操作 int类型
+        // 原子操作 int类型 线程安全 多线程改变对象的值时无需加锁，通过unsafe本地方法保证线程安全
         AtomicInteger atomicInteger = new AtomicInteger(12); // 用之前一定要初始化下，不然取的值是不固定的，由内存决定
         // 获取当前对象的值
         atomicInteger.get();
@@ -41,6 +41,7 @@ public class AtomicReferenceTest {
         // 可以当成  i++
         atomicInteger.getAndIncrement();
 
+        // 弱引用，可以被垃圾回收掉
         atomicInteger.weakCompareAndSet(12,23);
 
         /*atomicInteger.accumulateAndGet(2,

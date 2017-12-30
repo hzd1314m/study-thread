@@ -40,5 +40,14 @@ public class ConcurretHashMapTest {
             System.out.println(hashMapValue3);
             System.out.println(hashMap.get("1"));
         }
+
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                System.out.println("xxxxxx");
+            }
+        };
+        thread.start();
+        thread.start();
     }
 }
