@@ -30,6 +30,7 @@ public class OrderSysImplByNewWay implements IOrderSys {
     @Override
     public void addOrder(Order addOrder) throws InterruptedException {
         lock.lock();
+        lock.tryLock();
         try {
             while (currentOrderSize.get() >= MAX_ORDER_NUMBER) {
                 System.out.println("本店订单已经达到上限,暂时停止接单");

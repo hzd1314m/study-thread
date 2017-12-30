@@ -2,8 +2,8 @@ package com.lu.study.customandproduct.newjdk;
 
 import com.lu.study.bean.Order;
 import com.lu.study.customandproduct.interfaces.IOrderSys;
-import com.lu.study.customandproduct.oldjdk.CustomThread;
-import com.lu.study.customandproduct.oldjdk.ProductThread;
+import com.lu.study.customandproduct.CustomThread;
+import com.lu.study.customandproduct.ProductThread;
 
 import java.util.ArrayList;
 import java.util.List;

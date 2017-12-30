@@ -1,4 +1,4 @@
-package com.lu.study.customandproduct.oldjdk;
+package com.lu.study.customandproduct;
 
 import com.lu.study.bean.Order;
 import com.lu.study.customandproduct.interfaces.IOrderSys;

@@ -1,6 +1,8 @@
 package com.lu.study.customandproduct.oldjdk;
 
 import com.lu.study.bean.Order;
+import com.lu.study.customandproduct.CustomThread;
+import com.lu.study.customandproduct.ProductThread;
 import com.lu.study.customandproduct.interfaces.IOrderSys;
 
 import java.util.ArrayList;
