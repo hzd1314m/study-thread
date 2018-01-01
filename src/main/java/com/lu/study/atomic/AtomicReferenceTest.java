@@ -44,8 +44,8 @@ public class AtomicReferenceTest {
         // 弱引用，可以被垃圾回收掉
         atomicInteger.weakCompareAndSet(12,23);
 
-        /*atomicInteger.accumulateAndGet(2,
-                (2,3)->2,3);*/
+        //atomicInteger.accumulateAndGet(2,applyAsInt(1,2)
+                //);
         // 当对象的值是11的时候 把值改成13，其他情况不做任何处理，若更新成功返回true，否则返回false
         atomicInteger.compareAndSet(11, 13);
 
