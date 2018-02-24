@@ -14,12 +14,16 @@ public class CountDownLatchTest {
         CountDownLatch downLatch = new CountDownLatch(2);
         Thread thread = new Thread(new Work2(downLatch));
         Thread thread2 = new Thread(new Work2(downLatch));
+        System.out.println(downLatch.getCount());
         thread.start();
         thread2.start();
+
         System.out.println("finish work1");
         downLatch.await();
 
         System.out.println("finish work2");
+        System.out.println(downLatch.getCount());
+        //CountDownLatch downLatch = new CountDownLatch(2);
     }
 
     static class Work2 implements Runnable {
@@ -33,7 +37,7 @@ public class CountDownLatchTest {
         public void run() {
             System.out.println("线程开始执行");
             Random random = new Random();
-            Long sleepTime = Long.valueOf(random.nextInt(10) * 10);
+            Long sleepTime = Long.valueOf(random.nextInt(10) * 100);
             // 模拟不同线程处理时间可能不一样
             System.out.println(Thread.currentThread().getId() + "线程睡眠 " + sleepTime / 1000D);
             try {

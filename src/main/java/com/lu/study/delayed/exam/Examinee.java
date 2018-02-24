@@ -37,7 +37,7 @@ public class Examinee implements Runnable, Delayed {
     public Examinee(String name) {
         this.name = name;
         // 随机模拟考生考试卷耗时
-        this.testTime = threadLocalRandom.nextInt(120);
+        this.testTime = threadLocalRandom.nextInt(160);
         // 这里模拟考生提交试卷
         this.endExamTime = TimeUnit.NANOSECONDS.convert(testTime, TimeUnit.NANOSECONDS) + System.nanoTime();// 纳秒级别
     }

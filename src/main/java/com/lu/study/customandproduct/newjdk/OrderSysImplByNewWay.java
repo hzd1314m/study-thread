@@ -30,7 +30,7 @@ public class OrderSysImplByNewWay implements IOrderSys {
     @Override
     public void addOrder(Order addOrder) throws InterruptedException {
         lock.lock();
-        lock.tryLock();
+        //lock.tryLock();
         try {
             while (currentOrderSize.get() >= MAX_ORDER_NUMBER) {
                 System.out.println("本店订单已经达到上限,暂时停止接单");
@@ -72,6 +72,7 @@ public class OrderSysImplByNewWay implements IOrderSys {
                     removeOrder.getAccountName() , removeOrder.getAccountTableID() , removeOrder.getTotalMoney() , removeOrder.getRange());
             System.out.println(log);
             currentOrderSize.decrementAndGet();
+
             System.out.println("本店正在火热接单,目前完成订单数量为:" + currentFinishOrderSize.incrementAndGet());
 
             totalMoneny = totalMoneny + removeOrder.getTotalMoney() * removeOrder.getRange();

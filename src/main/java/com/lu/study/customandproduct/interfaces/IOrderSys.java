@@ -20,4 +20,6 @@ public interface IOrderSys {
 
     // 完成一个订单
     void removeOrder(Order removeOrder) throws InterruptedException;
+
+
 }

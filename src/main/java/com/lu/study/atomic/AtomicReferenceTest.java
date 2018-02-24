@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AtomicReferenceTest {
     static AtomicReference<Student> studentAtomicReference = new AtomicReference<>();
 
+
     public static void main(String[] args) {
         Student oldStudent = Student.builder().age(13).id("20171230").name("lu").build();
         studentAtomicReference.set(oldStudent);
@@ -31,6 +32,7 @@ public class AtomicReferenceTest {
 
         // 原子操作 int类型 线程安全 多线程改变对象的值时无需加锁，通过unsafe本地方法保证线程安全
         AtomicInteger atomicInteger = new AtomicInteger(12); // 用之前一定要初始化下，不然取的值是不固定的，由内存决定
+        int i=12;
         // 获取当前对象的值
         atomicInteger.get();
         // 先自减 后返回自减后的值  可以看成  --i

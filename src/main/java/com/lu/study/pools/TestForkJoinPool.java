@@ -1,5 +1,6 @@
 package com.lu.study.pools;
 
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.*;
 
@@ -22,6 +23,7 @@ public class TestForkJoinPool {
 
         // 子任务结束计算的值
         private Integer endValue;
+        private List a;
 
         public MyForkJoinTask(Integer startValue, Integer endValue) {
             this.startValue = startValue;

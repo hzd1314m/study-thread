@@ -14,7 +14,6 @@ import java.util.concurrent.Executors;
  * @system study-thread
  * @Time 2017/12/31
  */
-@Slf4j
 public class CyclicBarrierTest {
     public static void main(String[] args) throws IOException, InterruptedException {
         //如果将参数改为4，但是下面只加入了3个选手，这永远等待下去

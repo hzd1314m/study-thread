@@ -12,6 +12,7 @@ public class Test {
     public static void main(String[] args) {
         List<Order> orderQueue = new ArrayList<>();
         IOrderSys orderSys = new OrderSys(orderQueue);
+
         // 订单多
         while (true) {
             new ProductThread(orderSys, Order.builder().build()).run();

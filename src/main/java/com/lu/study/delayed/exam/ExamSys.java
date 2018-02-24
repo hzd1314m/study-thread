@@ -24,7 +24,7 @@ public class ExamSys implements Runnable {
         System.out.println(" 系统开启考试，请在规定时间范围内完成考试并且交卷");
         while (examineeNum > 0) {
             Examinee examinee = examineeDelayQueue.poll();
-            if (examinee.getTestTime() < 90) {
+            if (examinee.getTestTime() < 120) {
                 examinee.run();
                 if (examineeNum > 0) {
                     examineeNum--;
